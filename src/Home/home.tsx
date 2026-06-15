@@ -1,8 +1,11 @@
 import React from "react";
+import { SkyTime } from "./SkyTime/SkyTime";
 
 export default function HomePage() {
 
     return (
-        <div></div>
+        <div>
+            <SkyTime />
+        </div>
     );
 }

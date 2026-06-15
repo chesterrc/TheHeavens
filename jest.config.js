@@ -7,3 +7,4 @@ export const testEnvironment = "jsdom";
 export const transform = {
   ...tsJestTransformCfg,
 };
+export const setUpFilesAfterEnv = ["setupTests.js"];

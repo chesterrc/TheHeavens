@@ -1,13 +1,16 @@
-import { describe } from "node:test"; 
 import { render } from '@testing-library/react';
-import {expect, test} from '@jest/globals';
+import {jest, expect, test, describe} from '@jest/globals';
 
 import HomePage from "./home";
+import { SkyTime } from "./SkyTime/SkyTime";
+
+jest.mock("./SkyTime/SkyTime");
 
 describe("tests for the home page", () => {
 
-    test("Should obtain the clock time for the sun movement", () => {
+    test("Should render the SkyTime on load", () => {
         render(<HomePage />);
 
+        expect(SkyTime).toHaveBeenCalled();
     });
 })
